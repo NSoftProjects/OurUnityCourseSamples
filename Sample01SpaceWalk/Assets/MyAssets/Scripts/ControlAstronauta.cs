@@ -6,10 +6,10 @@ using System.Collections;
 
 public class ControlAstronauta : MonoBehaviour {
 	float maxCarga;
-	[HideInInspector] public float calor = 0f;
-	[HideInInspector] public float altura;
-	[HideInInspector] public bool enAtmosfera = false;
-	[HideInInspector] public bool ganarPartida = false;
+	public float calor = 0f;
+	public float altura;
+	public bool enAtmosfera = false;
+	public bool ganarPartida = false;
 	
 	
 	
@@ -136,7 +136,10 @@ public class ControlAstronauta : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		//Debug.Log (other.name);
-		if (other.name == "Planet02Atmosfera") {
+
+		Debug.Log ("astronauta trigger enter");
+
+		if (other.name == "Planeta01Atmosfera") {
 			enAtmosfera = true;
 			
 		}
